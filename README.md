@@ -61,3 +61,5 @@ Hotguo
 ## 统计
 
 本插件使用 bStats 来收集匿名使用统计数据，以帮助改进插件。
+
+![](https://bstats.org/signatures/bukkit/JiMsg.svg)
