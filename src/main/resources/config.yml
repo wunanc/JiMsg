@@ -1,8 +1,6 @@
-# 欢迎消息配置
 welcome-message: "&d欢迎新玩家 &e%player% &d加入服务器!"
 welcome-message-enabled: true
 
-# 玩家加入/退出消息配置
 join-message: "&a[+]%player%"
 join-message-enabled: true
 quit-message: "&c[-]%player%"

@@ -2,39 +2,26 @@ package top.wunanc.jiMsg.data;
 
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import org.bukkit.plugin.java.JavaPlugin;
 import top.wunanc.jiMsg.ConfigManager;
 import top.wunanc.jiMsg.folia.FoliaScheduler;
 
 import java.io.*;
 import java.lang.reflect.Type;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class JoinDataManager {
     private final JavaPlugin plugin;
-    private final ConfigManager configManager;
     private final Gson gson;
     private final File dataFile;
 
-    // 使用 Set 存储已经加入过的玩家 UUID
     private final Set<String> joinedPlayers = ConcurrentHashMap.newKeySet();
     private final Object fileLock = new Object();
 
-    public JoinDataManager(JavaPlugin plugin, ConfigManager configManager) {
+    public JoinDataManager(JavaPlugin plugin) {
         this.plugin = plugin;
-        this.configManager = configManager;
         this.gson = new GsonBuilder().setPrettyPrinting().create();
 
         // 确保数据文件夹存在
@@ -71,9 +58,6 @@ public class JoinDataManager {
         });
     }
 
-    /**
-     * 检查玩家是否是首次加入
-     */
     public boolean isFirstJoin(String playerUuid) {
         return !joinedPlayers.contains(playerUuid);
     }
@@ -84,7 +68,6 @@ public class JoinDataManager {
     public void recordJoin(String playerUuid) {
         joinedPlayers.add(playerUuid);
 
-        // 异步保存
         FoliaScheduler.runAsync(plugin, () -> {
             synchronized (fileLock) {
                 saveJoinDataToFile();
@@ -117,7 +100,6 @@ public class JoinDataManager {
      */
     private void saveJoinDataToFile() {
         try {
-            // 确保目录存在
             dataFile.getParentFile().mkdirs();
 
             try (Writer writer = new FileWriter(dataFile)) {

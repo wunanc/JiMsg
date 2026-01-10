@@ -25,10 +25,8 @@ public class ConfigManager {
             plugin.saveResource("config.yml", false);
         }
 
-        // 加载配置文件
         config = YamlConfiguration.loadConfiguration(configFile);
         
-        // 检查配置文件完整性
         if (!checkConfigIntegrity()) {
             plugin.getLogger().severe("配置文件部分内容缺失,请删除配置文件重新生成或者前往 https://github.com/wunanc/JiMsg 检查缺失内容");
             Bukkit.getPluginManager().disablePlugin(plugin);
