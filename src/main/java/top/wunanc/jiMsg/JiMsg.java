@@ -1,5 +1,6 @@
 package top.wunanc.jiMsg;
 
+import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 import top.wunanc.jiMsg.data.JoinDataManager;
 import top.wunanc.jiMsg.handler.PlayerJoinHandler;
@@ -13,6 +14,8 @@ public final class JiMsg extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        int pluginId = 28788;
+        Metrics metrics = new Metrics(this, pluginId);
         configManager = new ConfigManager(this);
         
         configManager.reloadConfig();
