@@ -1,0 +1,8 @@
+name: JiMsg
+version: ${project.version}
+main: top.wunanc.jiMsg.JiMsg
+api-version: '1.21'
+authors: [ Hotguo ]
+description: 修改加入服务器的信息-支持Folia!
+website: wunanc.top
+folia-supported: true
