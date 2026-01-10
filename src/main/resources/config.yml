@@ -1,7 +1,13 @@
-welcome-message: "&d欢迎新玩家 &e%player% &d加入服务器!"
+#是否开启玩家第一次进入服务器时的欢迎信息
 welcome-message-enabled: true
+#信息内容，%player% 会被替换为玩家名称
+welcome-message: "&d欢迎新玩家 &e%player% &d加入服务器!"
 
-join-message: "&a[+]%player%"
+#是否开启玩家加入服务器时的信息显示
 join-message-enabled: true
-quit-message: "&c[-]%player%"
+#玩家加入服务器时显示的信息
+join-message: "&a[+]%player%"
+#是否开启玩家离开服务器时的信息显示
 quit-message-enabled: true
+#玩家离开服务器时显示的信息
+quit-message: "&c[-]%player%"
