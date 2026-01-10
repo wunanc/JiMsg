@@ -1,4 +1,20 @@
-# JiMsg
+<div align="center">
+
+<img src="logos/logo.png" alt="" width="30%">
+
+[![Documentation](https://img.shields.io/badge/Document-Online-70f3ff?logo=readthedocs)](https://dominion.lunadeer.cn/)
+[![GitHub Repository](https://img.shields.io/badge/SourceCode-GitHub-blue?logo=github)](https://github.com/LunaDeerMC/Dominion)
+[![bStats](https://img.shields.io/badge/bStats-Statistics-eacd76?logo=google-analytics)](https://bstats.org/plugin/bukkit/JiMsg/28788)
+
+
+[![Latest Build](https://img.shields.io/github/v/release/wunanc/JiMsg?label=LatestBuild&logo=github&color=0aa344)](https://github.com/wunanc/JiMsg/releases/latest)
+
+[![Modrinth](https://img.shields.io/badge/To-Modrinth-1bd96a)](https://modrinth.com/plugin/lunadeer-dominion)
+[![Spigot](https://img.shields.io/badge/To-Spigot-ed8106)](#)
+
+![](https://img.shields.io/github/downloads/wunanc/JiMsg/total?logo=github&label=Github%20Downloads)
+
+</div>
 
 JiMsg 是一个用于修改 Minecraft 服务器玩家加入和退出消息的插件，支持 Folia！
 
@@ -6,10 +22,9 @@ JiMsg 是一个用于修改 Minecraft 服务器玩家加入和退出消息的插
 
 - 自定义玩家加入服务器时的消息
 - 自定义玩家离开服务器时的消息
-- 支持 Folia 服务端
+- 支持 `Paper|Folia` 服务端
 - 使用 bStats 统计数据（可选）
 - 支持颜色代码和占位符
-- 记录玩家首次加入时间
 
 ## 安装
 
