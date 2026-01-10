@@ -39,7 +39,7 @@ public class PlayerJoinHandler implements Listener {
                     ColorUtils.sendMessage(onlinePlayer, welcomeMessage);
                 }
 
-                System.out.println(ChatColor.stripColor(welcomeMessage));
+                plugin.getServer().getConsoleSender().sendMessage(ChatColor.stripColor(welcomeMessage));
             }
         }
 
@@ -55,7 +55,7 @@ public class PlayerJoinHandler implements Listener {
                 ColorUtils.sendMessage(onlinePlayer, joinMessage);
             }
 
-            System.out.println(ChatColor.stripColor(joinMessage));
+            plugin.getServer().getConsoleSender().sendMessage(ChatColor.stripColor(joinMessage));
         } else {
             event.setJoinMessage(null);
         }

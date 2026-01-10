@@ -34,7 +34,7 @@ public class PlayerQuitHandler implements Listener {
                 ColorUtils.sendMessage(onlinePlayer, quitMessage);
             }
 
-            System.out.println(ChatColor.stripColor(quitMessage));
+            plugin.getServer().getConsoleSender().sendMessage(ChatColor.stripColor(quitMessage));
         } else {
             event.setQuitMessage(null);
         }
