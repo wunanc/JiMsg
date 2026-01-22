@@ -15,50 +15,50 @@
 
 </div>
 
-JiMsg 是一个用于修改 Minecraft 服务器玩家加入和退出消息的插件，支持 Folia！
+JiMsg is a plugin for modifying Minecraft server player join and quit messages, supporting Folia!
 
-## 特性
+## Features
 
-- 自定义玩家加入服务器时的消息
-- 自定义玩家离开服务器时的消息
-- 支持 `Paper|Folia` 服务端
-- 使用 bStats 统计数据（可选）
-- 支持颜色代码和占位符
+- Customize the message when players join the server
+- Customize the message when players leave the server
+- Supports `Paper|Folia` servers
+- Uses bStats statistics (optional)
+- Supports color codes and placeholders
 
-## 安装
+## Installation
 
-1. 下载 JiMsg 插件 JAR 文件
-2. 将其放入您的服务器 [plugin](file:///H:/Wunanc/JiMsg/src/main/resources/plugin.yml#L1-L1) 目录中
-3. 重启服务器
-4. 检查配置文件并根据需要进行自定义
+1. Download the JiMsg plugin JAR file
+2. Put it in your server's [plugin](file:///H:/Wunanc/JiMsg/src/main/resources/plugin.yml#L1-L1) directory
+3. Restart the server
+4. Check the configuration file and customize as needed
 
-## 配置
+## Configuration
 
-插件会在第一次运行时生成 [config.yml](file:///H:/Wunanc/JiMsg/src/main/resources/config.yml#L1-L1)，您可以编辑该文件来自定义加入/退出消息。
+The plugin generates a [config.yml](file:///H:/Wunanc/JiMsg/src/main/resources/config.yml#L1-L1) file upon first run, you can edit this file to customize join/quit messages.
 
-## 依赖
+## Dependencies
 
-- Paper/Spigot 1.21 或更高版本
+- Paper/Spigot 1.21 or higher
 - Java 21+
 
-## 开发
+## Development
 
-本项目使用 Maven 构建，您可以通过以下命令编译插件：
+This project uses Maven for building, you can compile the plugin with the following command:
 
 ```bash
 mvn clean package
 ```
 
-## 作者
+## Author
 
 Hotguo
 
-## 许可证
+## License
 
-本项目采用 MIT 许可证 - 查看 [LICENSE](file:///H:/Wunanc/JiMsg/LICENSE#L1-L21) 文件了解详情。
+This project is licensed under the MIT License - see the [LICENSE](file:///H:/Wunanc/JiMsg/LICENSE#L1-L21) file for details.
 
-## 统计
+## Statistics
 
-本插件使用 bStats 来收集匿名使用统计数据，以帮助改进插件。
+This plugin uses bStats to collect anonymous usage statistics to help improve the plugin.
 
 ![](https://bstats.org/signatures/bukkit/JiMsg.svg)
